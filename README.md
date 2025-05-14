@@ -45,8 +45,6 @@ Build a binary classification model to predict customer churn using a dataset of
 - Tenure (time with the company) is the strongest negative indicator of churn.
 - Adding online security and tech support reduces churn probability.
 
-## 🚀 Bonus
-✅ Created a simple dashboard using **Streamlit** to allow non-technical users to upload CSV data and see churn predictions.
 
 ## 🧠 What I Learned
 - Practical application of binary classification to real-world business problems.
