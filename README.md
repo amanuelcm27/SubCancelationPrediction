@@ -10,7 +10,7 @@ Build a binary classification model to predict customer churn using a dataset of
 - Cleaned and prepared data with features like tenure, monthly charges, support calls, and contract type.
 - Engineered new features such as usage intensity and late payment frequency.
 - Trained and compared several models: **Logistic Regression**, **Random Forest**, **XGBoost**.
-- Achieved over **85% accuracy** with an optimized XGBoost model.
+- Achieved over **85%+ accuracy** with an optimized XGBoost model.
 
 ## 💼 Business Use Case
 - Predict which users are likely to cancel next month.
@@ -32,9 +32,7 @@ Build a binary classification model to predict customer churn using a dataset of
 | XGBoost             | **87.1%** | **85.3%** | **84.2%** |
 
 ## 📁 Dataset
-- Public dataset: `Telco Customer Churn` (via Kaggle)
-- 7,000+ customer records with 20+ features.
-
+- N/A
 ## 📉 Visuals
 - Correlation heatmaps for feature selection
 - ROC curves and confusion matrix per model
