@@ -38,7 +38,7 @@ We used:
 
 ## 🤖 Embedding Text Features (NLP)
 
-We used **Sentence-BERT (SBERT)** via the `sentence-transformers` library to convert textual columns into embeddings.
+I used **Sentence-BERT (SBERT)** via the `sentence-transformers` library to convert textual columns into embeddings.
 
 - Model: `all-MiniLM-L6-v2`
 - GPU Accelerated via `.to('cuda')` for fast encoding
@@ -60,8 +60,8 @@ After processing:
 - Structured numeric features:
   - `likes`, `dislikes`, `comment_count`, `at_what_hour`, `dayofweek`, `how_long_till_trending`
 - Final shape of `X`: (n, **1159** features)
-
-Note: We **do not scale the target `views`** anymore, as it's unnecessary for tree-based models like XGBoost.
+Embedding the text to vector took time: **~20 Minutes**
+Note: i **do not scale the target `views`** anymore, as it's unnecessary for tree-based models like XGBoost.
 
 ---
 
@@ -93,7 +93,7 @@ Training time: **~4 seconds**
 - **R² Score**: `0.8958` ✅
 - **MSE**: `~1.2 trillion` (in raw view count scale)
 
-> Performance on CA improved **significantly** after we stopped normalizing the target (`views`) — proving that tree models perform better with raw targets.
+> Performance on CA improved **significantly** after i stopped normalizing the target (`views`) — proving that tree models perform better with raw targets.
 
 ---
 
@@ -103,13 +103,13 @@ Training time: **~4 seconds**
 - **Embeddings improve performance** dramatically → capturing semantic meaning of titles/tags/channels gives the model deep insight
 - **Cross-country generalization works** → The US-trained model still performs strongly on the Canadian dataset (both English-speaking)
 - **GPU acceleration matters** → Sentence-BERT and XGBoost run **10x faster** on GPU
-- **Data leakage can hurt** → Accidentally including `views` in features inflates performance. We fixed this and retrained properly.
+- **Data leakage can hurt** → Accidentally including `views` in features inflates performance. I fixed this and retrained properly.
 
 ---
 
 ## 📊 Visualization
 
-We used scatter plots to visualize:
+I used scatter plots to visualize:
 - Actual vs Predicted view counts
 - Distributions of key features
 - Cross-country feature comparison
