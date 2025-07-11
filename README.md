@@ -27,7 +27,7 @@ Build a binary classification model to predict customer churn using a dataset of
 ## 📊 Model Performance
 | Model             | Accuracy | Precision | Recall |
 |------------------|----------|-----------|--------|
-| Logistic Regression | 79.2%   | 76.8%     | 74.3%  |
+
 | Random Forest       | 84.5%   | 82.1%     | 81.0%  |
 | XGBoost             | **87.1%** | **85.3%** | **84.2%** |
 
